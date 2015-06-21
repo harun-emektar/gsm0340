@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="NewScope" pattern="file[smsCodec]:src/main/java//*||file[smsCodec]:src/test/java//*" />
+</component>
