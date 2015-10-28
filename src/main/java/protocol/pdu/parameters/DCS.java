@@ -182,10 +182,7 @@ public class DCS {
         int group = getCodingGroup();
         if (group == MESSAGE_WAIT_INDICATION_GROUP) {
             byte gb = (byte) (value >> 4 & 0xf);
-            if (gb == 0xd || gb == 0xe) {
-                return true;
-            }
-            return false;
+            return gb == 0xd || gb == 0xe;
         }
         throw new NotApplicable("Message is not in Message Waiting Group");
     }
@@ -198,10 +195,7 @@ public class DCS {
         int group = getCodingGroup();
         if (group == MESSAGE_WAIT_INDICATION_GROUP) {
             byte gb = (byte) (value >> 4 & 0xf);
-            if (gb == 0xc) {
-                return true;
-            }
-            return false;
+            return gb == 0xc;
         }
         throw new NotApplicable("Message is not in Mesage Waiting Group");
     }
